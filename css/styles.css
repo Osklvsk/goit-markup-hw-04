@@ -3,7 +3,7 @@ body{
     color: #434455;
     background-color: #ffffff;
 }
-h1,h2,h3,h4,h5,h6,p{
+h1,h2,h3,h4,h5,h6,p,a{
     margin-top: 0;
     margin-bottom: 0;
     text-decoration: none;
@@ -38,6 +38,7 @@ ul{
 .navigation-list{
     display: flex;
     gap: 40px;
+   
 }
 .address-list{
     display: flex;
@@ -50,6 +51,17 @@ ul{
 .navigate{
     display: flex;
     align-items: center;
+    
+}
+.navig::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404BBF;
+    border-radius: 2px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .section{
     padding: 120px;
@@ -94,6 +106,8 @@ ul{
     display: flex;
     gap: 40px;
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
     
 }
 .contacts:hover, :focus{
@@ -105,7 +119,8 @@ ul{
     url(/images/people-office-1.png);
     padding: 188px 0;
     background-repeat: no-repeat;
-   background-size: cover;
+    max-width: 1440px;
+   background-size:cover;
    background-position: center;
    background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
@@ -126,6 +141,7 @@ ul{
     letter-spacing: 0.04em;
     color: #ffffff;
     background-color: #4d5ae5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
     cursor: pointer;
     display: block;
     min-width: 169px;
@@ -133,6 +149,7 @@ ul{
     border: none;
     border-radius: 4px;
     margin: 0 auto;
+    
 }
 .content{
     padding: 120px 0;
@@ -155,13 +172,25 @@ ul{
 }
 .team-icons{
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 24px;
 }
-.team-icos{
+.team-ics{
     width: 40px;
     height: 40px;
+}
+.team-icos{
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+.team-icos:hover, .team-icos:focus{
+background-color: #404BBF;
 }
 button:focus, button:hover{
 background-color: #404BBF;
@@ -185,6 +214,7 @@ background-color: #404BBF;
 .li-back{
     width: calc((100%-72px)/4);
 }
+
 .headline{
     font-weight: 500;
     font-size: 20px;
@@ -236,6 +266,31 @@ background-color: #404BBF;
 }
 .portfolio-size{
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-size:hover{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transform: translateY(0%);
+}
+.overlay{
+    position: relative;
+    overflow: hidden;
+}
+.overlay-p{
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay:hover .overlay-p{
+transform: translateY(0);
 }
 .portfolio-apps{
     padding: 32px 16px;
@@ -245,6 +300,9 @@ background-color: #404BBF;
 }
 .studio-foot{
     color: #f4f4fd;
+}
+.logo-foot-box{
+    margin-right: 120px;
 }
 .logo-foot{
     font-family: "Raleway", sans-serif;
@@ -266,4 +324,30 @@ background-color: #404BBF;
     color: #f4f4fd;
     letter-spacing: 0.02em;
     max-width: 264px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+.socials-f{
+    display: flex;
+    gap: 16px;
+}
+.icons-f{
+    width: 40px;
+    height: 40px;
+}
+.content-icons-f{
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+
+}
+.content-icons-f:hover, .content-icons-f:focus{
+    background-color: #31d0aa;
 }
