@@ -89,6 +89,9 @@ ul{
     display: flex;
     gap: 40px;
     padding: 24px 0;
+    position: relative;
+    color: #404BBF;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2 1);
 }
 .navig:hover{
     color: #404BBF;
@@ -290,6 +293,7 @@ background-color: #404BBF;
     letter-spacing: 0.02em;
     color: #f4f4fd;
     padding: 40px 32px;
+    background-color: #4d5ae5;
     height: 100%;
     width: 100%;
     transform: translateY(100%);
@@ -308,9 +312,11 @@ transform: translateY(0);
     color: #f4f4fd;
 }
 .logo-foot-box{
-    margin-right: 120px;
     display: flex;
     align-items: baseline;
+}
+.social-media-box{
+    margin-right: 120px;
 }
 .logo-foot{
     font-family: "Raleway", sans-serif;
@@ -355,7 +361,8 @@ transform: translateY(0);
     border-radius: 50%;
     display: flex;
     align-items: center;
-
+justify-content: center;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .content-icons-f{
     fill: #f4f4fd;
