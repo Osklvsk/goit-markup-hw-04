@@ -80,8 +80,7 @@ ul{
     gap: 40px;
     padding: 24px 0;
     position: relative;
-    color: #404BBF;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navig:hover{
     color: #404BBF;
@@ -90,6 +89,7 @@ ul{
 content: "";
 position: absolute;
 left: 0;
+width: 100%;
 bottom: -1px;
 height: 4px;
 background-color: #404BBF;
@@ -146,7 +146,9 @@ border-radius: 2px;
     letter-spacing: 0.02em;
     color: #ffffff;
     max-width: 496px;
-    margin:72px auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
 }
 .btn{
     font-family: "Roboto", sans-serif;
@@ -179,12 +181,15 @@ border-radius: 2px;
     margin-bottom: 8px;
 }
 
+.li-back-cards{
+    width: calc((100% - 72px) / 4);
+   
+}
 .li-back{
     box-shadow:0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08); ;
     background-color: #ffffff;
-    width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
-}
+}  
 .team-icons{
     display: flex;
     justify-content: center;
@@ -247,6 +252,7 @@ background-color: #404BBF;
     line-height:1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    margin-bottom:8px ;
   
 }
 .team{
@@ -309,7 +315,7 @@ background-color: #404BBF;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.overlay:hover .overlay-p{
+.portfolio-size:hover .overlay-p{
 transform: translateY(0);
 }
 .portfolio-apps{
